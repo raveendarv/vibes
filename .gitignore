@@ -1,0 +1,8 @@
+.ipynb_checkpoints
+node_modules
+__pycache__
+.netlify
+keys
+vibes-api/venv
+vibes-api/.idea
+vibes-webapp/node_modules
