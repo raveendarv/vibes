@@ -6,3 +6,4 @@ keys
 vibes-api/venv
 vibes-api/.idea
 vibes-webapp/node_modules
+/.idea/

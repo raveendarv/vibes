@@ -5,9 +5,11 @@ import Footer from './components/Footer';
 import { Pie } from 'react-chartjs-2';
 import './App.css';
 import Spinner from './spinner.svg';
+import Textsum from './components/Textsum';
 
 class App extends Component {
 	state = {
+		route: '',
 		data: [ 0, 0, 0 ],
 		tweets: null,
 		networking: false
@@ -64,40 +66,51 @@ class App extends Component {
 				}
 			]
 		};
+		const { route } = this.state;
 		return (
-			<div className="App">
-				<div className="container">
-					<div style={{ marginTop: 20, marginBottom: 25 }}>
-						<h1 className="text-center">Twitter Sentiment Analyser For Business</h1>
-						<h5 className="text-center">
-							Search for Topics and Hashtags and get labelled data. (100 Most Recent Tweets)
-						</h5>
-					</div>
-					<div className="row">
-						<SearchBar submitHandler={this.analyseTweets} />
-					</div>
-					{this.state.networking ? (
-						<div style={{ marginTop: 25 }}>
-							<p className="text-center">Fetching Tweets, Analysing Sentiments, Calculating Summary...</p>
-							<img
-								src={`${Spinner}`}
-								style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto' }}
-								alt="Spinner"
-							/>
-						</div>
-					) : (
-						<div style={{ marginTop: 25 }}>
-							<Pie type="pie" data={data} />
-							<div style={{ marginTop: 35 }}>
-								<h3 className="text-center" style={{ marginBottom: 25 }}>
-									Recent Tweets
-								</h3>
-								{this.renderTweets()}
+			<div>
+				{route === 'twitter' ? (
+					<div className="App">
+						<div className="container">
+							<div style={{ marginTop: 20, marginBottom: 25 }}>
+								<h1 className="text-center">Twitter Sentiment Analyser For Business</h1>
+								<h5 className="text-center">
+									Search for Topics and Hashtags and get labelled data. (100 Most Recent Tweets)
+								</h5>
 							</div>
+							<div className="row">
+								<SearchBar submitHandler={this.analyseTweets} />
+							</div>
+							{this.state.networking ? (
+								<div style={{ marginTop: 25 }}>
+									<p className="text-center">
+										Fetching Tweets, Analysing Sentiments, Calculating Summary...
+									</p>
+									<img
+										src={`${Spinner}`}
+										style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto' }}
+										alt="Spinner"
+									/>
+								</div>
+							) : (
+								<div style={{ marginTop: 25 }}>
+									<Pie type="pie" data={data} />
+									<div style={{ marginTop: 35 }}>
+										<h3 className="text-center" style={{ marginBottom: 25 }}>
+											Recent Tweets
+										</h3>
+										{this.renderTweets()}
+									</div>
+								</div>
+							)}
+							<Footer />
 						</div>
-					)}
-					<Footer />
-				</div>
+					</div>
+				) : route === 'textsum' ? (
+					<h1>Text Summaryzer</h1>
+				) : (
+					<Textsum />
+				)}
 			</div>
 		);
 	}

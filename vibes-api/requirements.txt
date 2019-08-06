@@ -5,3 +5,12 @@ pandas
 textblob
 tweepy
 gunicorn
+beautifulsoup4
+bs4
+nltk
+spacy
+sumy
+thinc
+urllib3
+gensim
+gensim-sum-ext
