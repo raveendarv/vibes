@@ -6,6 +6,7 @@ import { Pie } from 'react-chartjs-2';
 import './App.css';
 import Spinner from './spinner.svg';
 import Textsum from './components/Textsum';
+import Signin from './components/Signin/Signin';
 
 class App extends Component {
 	state = {
@@ -107,9 +108,9 @@ class App extends Component {
 						</div>
 					</div>
 				) : route === 'textsum' ? (
-					<h1>Text Summaryzer</h1>
-				) : (
 					<Textsum />
+				) : (
+					<Signin />
 				)}
 			</div>
 		);

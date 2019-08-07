@@ -69,6 +69,8 @@ def get_text(url):
 def home():
     return 'Twitter Sentiment Analyser REST API.'
 
+
+
 @app.route('/analyse', methods=['GET'])
 def analyse():
     if request.args.get('hashtag') == 'true':
@@ -80,6 +82,18 @@ def analyse():
         sentiment = TextBlob(tweet.text).sentiment
         res.append({'text': tweet.text, 'subjectivity': sentiment.subjectivity, 'polarity': sentiment.polarity, 'author': tweet.user.screen_name})
     return jsonify(res)
+
+@app.route('/signin', methods=['GET','POST'])
+def signin():
+	if request.method == 'POST':
+		data = request.get_json()
+		email = data["email"]
+		password = data["password"]
+		a = []
+	a.append({'email':email,
+			  'password':password})
+	return jsonify(a)
+
 
 @app.route('/analyze',methods=['GET','POST'])
 def analyze():

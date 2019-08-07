@@ -18,3 +18,6 @@ hr {
 	background-color: red;
 	border: none;
 }
+.btn {
+	background-image: linear-gradient(45deg, rgba(123, 163, 163, 0.8) 0%, rgba(137, 44, 74, 0.8) 100%);
+}
