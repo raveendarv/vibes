@@ -2,7 +2,7 @@ import React from 'react';
 
 const Finaltextsum = ({ data }) => {
 	return (
-		<div className="container">
+		<div className="container jumbotron">
 			{/* {data.ctext} */}
 			{data.final_summary})
 		</div>

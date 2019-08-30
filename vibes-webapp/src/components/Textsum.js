@@ -85,7 +85,9 @@ export default class Textsum extends Component {
 					</div>
 
 					<div className="form-group">
-						<label className="display-4">Enter Text Here</label>
+						<label className="display-4" style={{ color: 'black' }}>
+							Enter Text Here
+						</label>
 						<textarea
 							className="form-control"
 							name="text"
@@ -103,7 +105,9 @@ export default class Textsum extends Component {
 						</button>
 					</div>
 					<div>
-						<label className="display-4">Enter URL Here</label>
+						<label className="display-4" style={{ color: 'black' }}>
+							Enter URL Here
+						</label>
 						<input
 							type="text"
 							className="form-control"

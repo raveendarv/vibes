@@ -10,7 +10,7 @@ import Signin from './components/Signin/Signin';
 
 class App extends Component {
 	state = {
-		route: '',
+		route: 'textsum',
 		data: [ 0, 0, 0 ],
 		tweets: null,
 		networking: false
