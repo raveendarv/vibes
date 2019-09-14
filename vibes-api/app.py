@@ -5,8 +5,8 @@ from flask_cors import CORS
 import tweepy
 from textblob import TextBlob
 from spacy_summarization import text_summarizer
-from gensim.summarization import summarize
-from nltk_summarization import nltk_summarizer
+# from gensim.summarization import summarize
+# from nltk_summarization import nltk_summarizer
 import time
 import spacy
 nlp = spacy.load('en_core_web_sm')
