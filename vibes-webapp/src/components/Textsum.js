@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Finaltextsum from './Finaltextsum';
+import Footer from './Footer';
 
 export default class Textsum extends Component {
 	state = {
@@ -124,6 +125,7 @@ export default class Textsum extends Component {
 					</div>
 				</div>
 				{this.state.finaltext ? <Finaltextsum data={this.state.data} /> : <p> Robot</p>}
+				<Footer />
 			</div>
 		);
 	}
