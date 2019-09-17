@@ -88,9 +88,13 @@ def signin():
 		data = request.get_json()
 		email = data["email"]
 		password = data["password"]
-		a = []
-	a.append({'email':email,
-			  'password':password})
+		if(email=="ravi@gmail.com" and password == "password"):
+			a="success"
+		else:
+			a="fail"
+	# 	a = []
+	# a.append({'email':email,
+	# 		  'password':password})
 	return jsonify(a)
 
 

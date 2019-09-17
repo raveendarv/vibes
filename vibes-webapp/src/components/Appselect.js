@@ -3,17 +3,9 @@ import '../App.css';
 import twitter from '../img/twitter.png';
 import summarize from '../img/summarize.png';
 import Footer from './Footer';
-import Twitter from './Twitter';
-import Textsum from './Textsum';
-import { Route, Link } from 'react-router-dom';
 import { Card, CardText, CardDeck, CardTitle, Row, Col } from 'reactstrap';
 
-// class Appselect extends Component {
-// 	state = {
-// 		route: ''
-// 	};
-// }
-export default (props) => {
+const Appselect = (props) => {
 	return (
 		<div className="idk">
 			<Row sm="4">
@@ -41,14 +33,13 @@ export default (props) => {
 							/>
 							<CardText>Analyse the twitter feeds for the keyword entered</CardText>
 							<div className="parentElement">
-								<Link
+								<button
 									className="btn btn-lg btn-info "
 									style={{ marginLeft: '25px', color: 'black', top: '9px' }}
-									to="/twitter"
+									onClick={() => props.history.push('/twitter')}
 								>
 									Tweet
-								</Link>
-								<Route exact path="/twitter" component={Twitter} />
+								</button>
 							</div>
 						</Card>
 
@@ -71,7 +62,7 @@ export default (props) => {
 							/>
 							<CardText>Create a Summarization for the entered Text</CardText>
 							<div class="parentElement">
-								<Link
+								<button
 									className="btn btn-lg btn-info "
 									style={{
 										marginLeft: '5px',
@@ -80,18 +71,18 @@ export default (props) => {
 										top: '10px',
 										left: '15px'
 									}}
-									to="/textsum"
+									onClick={() => props.history.push('/textsum')}
 								>
 									Summarize
-								</Link>
-
-								<Route exact path="/textsum" component={Textsum} />
+								</button>
 							</div>
 						</Card>
 					</CardDeck>
 				</Col>
 			</Row>
-			<Footer />
+			<Footer style={{ 'margin-bottom': 50 }} />
 		</div>
 	);
 };
+
+export default Appselect;

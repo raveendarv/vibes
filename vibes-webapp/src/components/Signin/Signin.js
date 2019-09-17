@@ -4,8 +4,8 @@ import Art from './img/Asset1.png';
 import logo from './img/logo-white.png';
 
 class Signin extends Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 		this.state = {
 			email: '',
 			password: ''
@@ -13,12 +13,11 @@ class Signin extends Component {
 	}
 	onChangeEmail = (e) => {
 		this.setState({ email: e.target.value });
-		console.log(e.target.value);
 	};
 	onChangePassword = (e) => {
 		this.setState({ password: e.target.value });
-		console.log(e.target.value);
 	};
+
 	onSubmit = () => {
 		fetch('http://localhost:5000/signin', {
 			method: 'post',
@@ -29,7 +28,10 @@ class Signin extends Component {
 			})
 		})
 			.then((Response) => Response.json())
-			.then((res) => console.log(res));
+			.then(
+				(res) =>
+					res === 'success' ? this.props.history.push('/appselect') : alert('Enter Valid Email And Password')
+			);
 	};
 
 	render() {
@@ -45,7 +47,6 @@ class Signin extends Component {
 							<div className="logo-box2">
 								<img src={Art} alt="logo" className="logo2" />
 							</div>
-							{/* <!-- <span class="heading-primary-main">SIGNIN</span> --> */}
 
 							<span className="heading-primary-main1"> EMail</span>
 							<input

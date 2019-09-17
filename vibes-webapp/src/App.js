@@ -12,10 +12,8 @@ class App extends Component {
 	};
 
 	render() {
-		// const { route } = this.state;
 		return (
 			<div>
-				{/* {route === 'twitter' ? <Twitter /> : route === 'textsum' ? <Textsum /> : <Signin />} */}
 				<Route exact path="/" component={Signin} />
 				<Route exact path="/appselect" component={Appselect} />
 				<Route exact path="/twitter" component={Twitter} />
