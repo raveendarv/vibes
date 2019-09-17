@@ -24,7 +24,7 @@ hr {
 	background-image: linear-gradient(45deg, rgba(123, 163, 163, 0.8) 0%, rgba(137, 44, 74, 0.8) 100%);
 	text-align: center;
 }
-.card {
+.cards {
 	margin: 0 auto;
 	float: right;
 	margin-bottom: 10px;

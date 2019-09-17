@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../App.css';
 import twitter from '../img/twitter.png';
 import summarize from '../img/summarize.png';
@@ -6,7 +6,7 @@ import Footer from './Footer';
 import Twitter from './Twitter';
 import Textsum from './Textsum';
 import { Route, Link } from 'react-router-dom';
-import { Card, CardText, CardDeck, CardTitle, Row, Col, Button } from 'reactstrap';
+import { Card, CardText, CardDeck, CardTitle, Row, Col } from 'reactstrap';
 
 // class Appselect extends Component {
 // 	state = {
@@ -20,10 +20,10 @@ export default (props) => {
 				<Col sm="4">
 					<CardDeck
 						className="text-center justify-content-center"
-						style={{ width: '50rem', marginLeft: '1px', float: 'left', width: '200%', height: 'auto' }}
+						style={{ marginLeft: '1px', float: 'left', width: '200%', height: 'auto' }}
 					>
 						<Card
-							className="card text-center"
+							className="cards text-center"
 							body
 							outline
 							color="info"
@@ -53,7 +53,7 @@ export default (props) => {
 						</Card>
 
 						<Card
-							className="card text-center"
+							className="cards text-center"
 							body
 							outline
 							color="info"

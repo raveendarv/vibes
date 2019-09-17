@@ -101,7 +101,11 @@ export default class Textsum extends Component {
 							rows="10"
 							required="true"
 						/>
-						<button className="btn btn-lg btn-info" onClick={this.onSubmitText}>
+						<button
+							className="btn btn-lg btn-info"
+							onClick={this.onSubmitText}
+							style={{ marginTop: 20, marginBottom: 25 }}
+						>
 							Summarize
 						</button>
 					</div>
@@ -119,7 +123,11 @@ export default class Textsum extends Component {
 							}}
 							required="true"
 						/>
-						<button className="btn btn-lg btn-info" onClick={this.onSubmitUrl}>
+						<button
+							className="btn btn-lg btn-info"
+							onClick={this.onSubmitUrl}
+							style={{ marginTop: 20, marginBottom: 25 }}
+						>
 							Summarize
 						</button>
 					</div>
