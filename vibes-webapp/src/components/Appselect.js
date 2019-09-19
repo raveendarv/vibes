@@ -29,7 +29,7 @@ const Appselect = (props) => {
 								src={twitter}
 								alt="Twitter logo "
 								className="logo"
-								style={{ width: '40px', marginLeft: '90px' }}
+								style={{ width: '40px', marginLeft: '110px' }}
 							/>
 							<CardText>Analyse the twitter feeds for the keyword entered</CardText>
 							<div className="parentElement">
@@ -58,7 +58,7 @@ const Appselect = (props) => {
 								src={summarize}
 								alt="Summarize logo "
 								className="logo"
-								style={{ width: '40px', marginLeft: '90px' }}
+								style={{ width: '40px', marginLeft: '110px' }}
 							/>
 							<CardText>Create a Summarization for the entered Text</CardText>
 							<div class="parentElement">

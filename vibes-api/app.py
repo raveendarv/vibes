@@ -90,6 +90,8 @@ def signin():
 		password = data["password"]
 		if(email=="ravi@gmail.com" and password == "password"):
 			a="success"
+		elif(email=="arun@gmail.com" and password == "password"):
+			a="success"
 		else:
 			a="fail"
 	# 	a = []
