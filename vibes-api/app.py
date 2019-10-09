@@ -9,17 +9,23 @@ from spacy_summarization import text_summarizer
 # from nltk_summarization import nltk_summarizer
 import time
 import spacy
+import sqlite3
 nlp = spacy.load('en_core_web_sm')
 
 # Web Scraping Pkg
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
+
 #from urllib import urlopen
 
 # Sumy Pkg
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.lex_rank import LexRankSummarizer
+
+#sqlite connection
+
+
 
 # Twitter OAuth Tokens and Keys
 consumer_key = "b6CVvKiowcFTu3TYximMlbfgD"  # os.environ['CONSUMER_KEY']
@@ -88,10 +94,13 @@ def signin():
 		data = request.get_json()
 		email = data["email"]
 		password = data["password"]
-		if(email=="ravi@gmail.com" and password == "password"):
-			a="success"
-		elif(email=="arun@gmail.com" and password == "password"):
-			a="success"
+		conn = sqlite3.connect('vibes.db')
+		c = conn.cursor()
+		c.execute('SELECT * FROM login WHERE %s=? and %s=?'%('email','password'),(email,password))
+		login_table = c.fetchone()
+		if login_table:
+			if(email==login_table[0] and password == login_table[1]):
+				a="success"
 		else:
 			a="fail"
 	# 	a = []

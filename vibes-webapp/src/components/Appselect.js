@@ -61,7 +61,7 @@ const Appselect = (props) => {
 								style={{ width: '40px', marginLeft: '110px' }}
 							/>
 							<CardText>Create a Summarization for the entered Text</CardText>
-							<div class="parentElement">
+							<div className="parentElement">
 								<button
 									className="btn btn-lg btn-info "
 									style={{
