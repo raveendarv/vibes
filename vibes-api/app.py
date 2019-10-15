@@ -28,10 +28,10 @@ from sumy.summarizers.lex_rank import LexRankSummarizer
 
 
 # Twitter OAuth Tokens and Keys
-consumer_key = "b6CVvKiowcFTu3TYximMlbfgD"  # os.environ['CONSUMER_KEY']
-consumer_secret = "ngWNhy6tC3XoFljUY0TMea4P3kohqRsdqeYLci8HzaXjEl8S3b"  # os.environ['CONSUMER_SECRET']
-access_token = "837694848-0OuRr2kurjaArV5uRABJSgeSzjWNNSLDbZW4SiP1"  # os.environ['ACCESS_TOKEN']
-access_token_secret = "LVbguuSGUpZnVIUXefAwjekWVjHqyswSM8webYD0hPVUz"  # os.environ['ACCESS_TOKEN_SECRET']
+consumer_key =   # os.environ['CONSUMER_KEY']
+consumer_secret =   # os.environ['CONSUMER_SECRET']
+access_token =  # os.environ['ACCESS_TOKEN']
+access_token_secret = # os.environ['ACCESS_TOKEN_SECRET']
 
 # Setting OAuth 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
