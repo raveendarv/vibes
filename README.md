@@ -7,11 +7,11 @@ We have worked with React JS for front-end, Python-Flask framework for back-end,
 
 1. Clone this repo
 
-## Front-end (vibes-api)
+## Front-end (vibes-webapp)
 2. Run `npm install`
 3. Run `npm start`
 
-## Back-End (vibes-webapp)
+## Back-End (vibes-api)
 4. Run `pip install -r requirements.txt`
 5. Change your own Consumer API keys and Access token & access token secret from https://developer.twitter.com
 6. Run `python app.py`
